@@ -1,0 +1,96 @@
+html,body,header, #intro{
+	height: 100%;
+}
+#intro{
+	background: url(../img/cakes.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+ul :hover{
+	background: rgb(236, 11, 11);
+
+}
+
+.current a {
+    color: #6fb0b7;
+}
+
+.menu a{
+	background:#3d3d3d;
+	color: #fff;
+	padding: 10px;
+	display: block;
+	border-bottom: 1px solid #666;
+	transition: 0.5s all;
+}
+.sidebar{
+	width: 200px;
+	margin: 0 auto;
+}
+.menu a:hover{
+	background: #666;
+	padding: 10px 0 10px 20px;
+}
+.menu li:first-child a, .menu li .v_menu li:first-child a{
+	border-radius: 3px 3px 0 0;
+}
+.menu li:last-child a, .menu li .v_menu li:last-child a{
+	border-radius: 0 0 3px 3px;
+	border-bottom: 0;
+}
+.menu li .v_menu li a{
+	border-radius: 0;
+}
+
+.p_menu{position: relative;}
+.v_menu{
+	position: absolute;
+	width: 100%;
+	left: 100%;
+	top: -9999px;
+	opacity: 0;
+	border-left: 10px solid transparent;
+	transition: 0.5s opacity;
+}
+.p_menu:hover .v_menu{
+	opacity: 1;
+	top: 0;
+}
+
+.p_menu::after{
+	content: "";
+	position: absolute;
+	border:5px solid;
+	border-color: transparent transparent transparent #eee;
+	top:1em;
+	right: 0.7em;
+	transition: 0.5s;
+}
+.p_menu:hover::after{
+	transform: scaleX(-1);
+}
+
+.work{
+	font-size: 26px;
+    font-weight: bold;
+    margin-left: 35%; 
+}
+
+h1 {
+	    font-size: 30px;
+        font-weight: bold;
+		border-bottom: 2px solid #ccc; /* Параметры линии */ 
+		margin-bottom: 20px; /* Отступ */
+		padding-bottom: 10px; /* Расстояние от линии до текста */ 
+		margin-right: 350px; /* Отступ */
+	   
+   }
+   
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
